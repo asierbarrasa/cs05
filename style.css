@@ -1,32 +1,51 @@
-.form{
+body {
+  font-size: 17px;
+}
+
+.form {
   text-align: center;
 }
 
-.box{
+.box {
   display: inline-block;
   width: 200px;
   height: 50px;
 }
 
-#cleanBebida, #siguienteBebida, #cleanComida, #siguienteComida{
+#cleanBebida, #siguienteBebida, #cleanComida, #siguienteComida {
   display: inline-block;
-margin-top: 20px;
+  margin-top: 20px;
   width: 200px;
   height: 50px;
-
 }
 
-#listProd,#prcTotal{
+#listProd, #prcTotal {
   display: none;
 }
 
-#table{
-
+#table {
   width: 40%;
-  margin:auto;
+  margin: auto;
   text-align: center;
 }
 
-.centrado{
+.centrado {
   width: 100%;
+}
+
+.login {
+  text-align: center;
+}
+
+.formlog {
+  font-size: 20px;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+#entrar {
+  margin-top: 17px;
 }

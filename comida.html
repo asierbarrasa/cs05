@@ -5,125 +5,124 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
-  <title>Comida</title>
+  <title>Pedido</title>
 </head>
 
 <body>
   <div class="form">
-    <h1>Comida</h1>
+    <h1>Pedido</h1>
 
-      <input class="box" type="button" value="Menú 1" name="menu1" id="menu1">
-      <input class="box" type="button" value="Menú 2" name="menu2" id="menu2">
-      <input class="box" type="button" value="Menú 3" name="menu3" id="menu3">
-      <input class="box" type="button" value="Menú 4" name="menu4" id="menu4">
-      <input class="box" type="button" value="Menú 5" name="menu5" id="menu5"><br><br>
-      <input class="box" type="button" value="Bebida 1" name="bebida1" id="bebida1">
-      <input class="box" type="button" value="Bebida 2" name="bebida2" id="bebida2">
-      <input class="box" type="button" value="Bebida 3" name="bebida3" id="bebida3">
-      <input class="box" type="button" value="Bebida 4" name="bebida4" id="bebida4">
-      <input class="box" type="button" value="Bebida 5" name="bebida5" id="bebida5"><br><br>
-<div class="centrado">
+    <input class="box" type="button" value="Menú 1" name="menu1" id="menu1">
+    <input class="box" type="button" value="Menú 2" name="menu2" id="menu2">
+    <input class="box" type="button" value="Menú 3" name="menu3" id="menu3">
+    <input class="box" type="button" value="Menú 4" name="menu4" id="menu4">
+    <input class="box" type="button" value="Menú 5" name="menu5" id="menu5"><br><br>
+    <input class="box" type="button" value="Bebida 1" name="bebida1" id="bebida1">
+    <input class="box" type="button" value="Bebida 2" name="bebida2" id="bebida2">
+    <input class="box" type="button" value="Bebida 3" name="bebida3" id="bebida3">
+    <input class="box" type="button" value="Bebida 4" name="bebida4" id="bebida4">
+    <input class="box" type="button" value="Bebida 5" name="bebida5" id="bebida5"><br><br>
+    <div class="centrado">
       <table id="table">
-        <tr><td id="cabecera"><b>ID</b></td><td id=" cabecera2"><b>Producto</b></td><td id="cabecera3"><b>Precio</b></td></tr>
+        <tr>
+          <td id="cabecera"><b>ID</b></td>
+          <td id="cabecera2"><b>Producto</b></td>
+          <td id="cabecera3"><b>Precio</b></td>
+        </tr>
       </table>
-      </div>
-      <br>
-      <br>
-      Total: <input type="text" readonly id="total" value="0"/>
-      <br>
+    </div>
+    <br>
+    <br> Total: <input type="text" readonly id="total" value="0" />
+    <br>
 
 
-      <form method="GET" action="resumen.php"  id="form">
+    <form method="GET" action="resumen.php" id="form">
       <input type="text" name="listProd" id="listProd" hidden value="">
       <input type="text" name="precioTotal" id="prcTotal" hidden value="">
-      <input class="box" type="button" value="Clean" name="cleanComida" id="cleanComida"/>
-      <input class="box" type="submit" value="Siguiente" id="siguienteComida"/>
+      <input class="box" type="button" value="Clean" name="cleanComida" id="cleanComida" />
+      <input class="box" type="submit" value="Siguiente" id="siguienteComida" />
 
 
     </form>
   </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
-
-  $("#menu1").click(function(){
-    $('#table').append('<tr><td><input type"text" id="pId" value="m1" readonly/></td><td><input type="text" id="pName" value="Menu 1" readonly/></td><td><input type="text" id="pVal" value="5€"</td></tr>');
-    var price = parseInt($("#total").val())
-    $('#total').val(price + 5)
-  });
-  $("#menu2").click(function(){
-    $('#table').append('<tr><td><input type"text" id="pId" value="m2" readonly/></td><td><input type="text" id="pName" value="Menu 2" readonly/></td><td><input type="text" id="pVal" value="6€"</td></tr>');
-    var price = parseInt($("#total").val())
-    $('#total').val(price + 6)
-  });
-  $("#menu3").click(function(){
-    $('#table').append('<tr><td><input type"text" id="pId" value="m3" readonly/></td><td><input type="text" id="pName" value="Menu 3" readonly/></td><td><input type="text" id="pVal" value="7€"</td></tr>');
-    var price = parseInt($("#total").val())
-    $('#total').val(price + 7)
-  });
-  $("#menu4").click(function(){
-    $('#table').append('<tr><td><input type"text" id="pId" value="m4" readonly/></td><td><input type="text" id="pName" value="Menu 4" readonly/></td><td><input type="text" id="pVal" value="8€"</td></tr>');
-    var price = parseInt($("#total").val())
-    $('#total').val(price + 8)
-  });
-  $("#menu5").click(function(){
-    $('#table').append('<tr><td><input type"text" id="pId" value="m5" readonly/></td><td><input type="text" id="pName" value="Menu 5" readonly/></td><td><input type="text" id="pVal" value="9€"</td></tr>');
-    var price = parseInt($("#total").val())
-    $('#total').val(price + 9)
-  });
-  $("#bebida1").click(function(){
-    $('#table').append('<tr><td><input type"text" id="pId" value="b1" readonly/></td><td><input type="text" id="pName" value="Bebida 1" readonly/></td><td><input type="text" id="pVal" value="1€"</td></tr>');
-    var price = parseInt($("#total").val())
-    $('#total').val(price + 1)
-  });
-  $("#bebida2").click(function(){
-    $('#table').append('<tr><td><input type"text" id="pId" value="b2" readonly/></td><td><input type="text" id="pName" value="Bebida 2" readonly/></td><td><input type="text" id="pVal" value="2€"</td></tr>');
-    var price = parseInt($("#total").val())
-    $('#total').val(price + 2)
-  });
-  $("#bebida3").click(function(){
-    $('#table').append('<tr><td><input type"text" id="pId" value="b3" readonly/></td><td><input type="text" id="pName" value="Bebida 3" readonly/></td><td><input type="text" id="pVal" value="3€"</td></tr>');
-    var price = parseInt($("#total").val())
-    $('#total').val(price + 3)
-  });
-  $("#bebida4").click(function(){
-    $('#table').append('<tr><td><input type"text" id="pId" value="b4" readonly/></td><td><input type="text" id="pName" value="Bebida 4" readonly/></td><td><input type="text" id="pVal" value="4€"</td></tr>');
-    var price = parseInt($("#total").val())
-    $('#total').val(price + 4)
-  });
-  $("#bebida5").click(function(){
-    $('#table').append('<tr><td><input type"text" id="pId" value="b5" readonly/></td><td><input type="text" id="pName" value="Bebida 5" readonly/></td><td><input type="text" id="pVal" value="5€"</td></tr>');
-    var price = parseInt($("#total").val())
-    $('#total').val(price + 5)
-  });
-
-  $("#cleanComida").click(function(){
-    $("#cleanComida").click(function(){
-      $("#table").html("<tr><td><b>ID</b></td><td><b>Producto</b></td><td><b>Precio</b></td></tr>")
-      $("#total").val("0")
+    $("#menu1").click(function() {
+      $('#table').append('<tr><td><input type"text" id="pId" value="m1" readonly/></td><td><input type="text" id="pName" value="Menu 1" readonly/></td><td><input type="text" id="pVal" value="5€"</td></tr>');
+      var price = parseInt($("#total").val())
+      $('#total').val(price + 5)
+    });
+    $("#menu2").click(function() {
+      $('#table').append('<tr><td><input type"text" id="pId" value="m2" readonly/></td><td><input type="text" id="pName" value="Menu 2" readonly/></td><td><input type="text" id="pVal" value="6€"</td></tr>');
+      var price = parseInt($("#total").val())
+      $('#total').val(price + 6)
+    });
+    $("#menu3").click(function() {
+      $('#table').append('<tr><td><input type"text" id="pId" value="m3" readonly/></td><td><input type="text" id="pName" value="Menu 3" readonly/></td><td><input type="text" id="pVal" value="7€"</td></tr>');
+      var price = parseInt($("#total").val())
+      $('#total').val(price + 7)
+    });
+    $("#menu4").click(function() {
+      $('#table').append('<tr><td><input type"text" id="pId" value="m4" readonly/></td><td><input type="text" id="pName" value="Menu 4" readonly/></td><td><input type="text" id="pVal" value="8€"</td></tr>');
+      var price = parseInt($("#total").val())
+      $('#total').val(price + 8)
+    });
+    $("#menu5").click(function() {
+      $('#table').append('<tr><td><input type"text" id="pId" value="m5" readonly/></td><td><input type="text" id="pName" value="Menu 5" readonly/></td><td><input type="text" id="pVal" value="9€"</td></tr>');
+      var price = parseInt($("#total").val())
+      $('#total').val(price + 9)
+    });
+    $("#bebida1").click(function() {
+      $('#table').append('<tr><td><input type"text" id="pId" value="b1" readonly/></td><td><input type="text" id="pName" value="Bebida 1" readonly/></td><td><input type="text" id="pVal" value="1€"</td></tr>');
+      var price = parseInt($("#total").val())
+      $('#total').val(price + 1)
+    });
+    $("#bebida2").click(function() {
+      $('#table').append('<tr><td><input type"text" id="pId" value="b2" readonly/></td><td><input type="text" id="pName" value="Bebida 2" readonly/></td><td><input type="text" id="pVal" value="2€"</td></tr>');
+      var price = parseInt($("#total").val())
+      $('#total').val(price + 2)
+    });
+    $("#bebida3").click(function() {
+      $('#table').append('<tr><td><input type"text" id="pId" value="b3" readonly/></td><td><input type="text" id="pName" value="Bebida 3" readonly/></td><td><input type="text" id="pVal" value="3€"</td></tr>');
+      var price = parseInt($("#total").val())
+      $('#total').val(price + 3)
+    });
+    $("#bebida4").click(function() {
+      $('#table').append('<tr><td><input type"text" id="pId" value="b4" readonly/></td><td><input type="text" id="pName" value="Bebida 4" readonly/></td><td><input type="text" id="pVal" value="4€"</td></tr>');
+      var price = parseInt($("#total").val())
+      $('#total').val(price + 4)
+    });
+    $("#bebida5").click(function() {
+      $('#table').append('<tr><td><input type"text" id="pId" value="b5" readonly/></td><td><input type="text" id="pName" value="Bebida 5" readonly/></td><td><input type="text" id="pVal" value="5€"</td></tr>');
+      var price = parseInt($("#total").val())
+      $('#total').val(price + 5)
     });
 
-    $()
-  });
+    $("#cleanComida").click(function() {
+      $("#cleanComida").click(function() {
+        $("#table").html("<tr><td><b>ID</b></td><td><b>Producto</b></td><td><b>Precio</b></td></tr>")
+        $("#total").val("0")
+      });
 
-  $("#form").submit(function(event){
-    var list =""
-    $("tr").each(function(){
-      list += $(this).find("#pId").val()
-      list += " "
-      list += $(this).find("#pName").val()
-      list += " "
-      list += $(this).find("#pVal").val()
-      list += ","
+      $()
     });
-    $("#listProd").val(list)
-    $("#prcTotal").val($("#total").val())
+
+    $("#form").submit(function(event) {
+      var list = ""
+      $("tr").each(function() {
+        list += $(this).find("#pId").val()
+        list += " "
+        list += $(this).find("#pName").val()
+        list += " "
+        list += $(this).find("#pVal").val()
+        list += ","
+      });
+      $("#listProd").val(list)
+      $("#prcTotal").val($("#total").val())
 
 
 
-  });
-
-
-
+    });
   </script>
 
 </body>
