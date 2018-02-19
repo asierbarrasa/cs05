@@ -12,16 +12,22 @@
 
   <div class="form">
     <h1>Resumen</h1>
-    <form action="">
+    <form action="" id="form">
       <div id="textarea" >
       </div>
       <br>
-      <input type="submit" value="Finalizar pedido">
+      <input type="submit" value="Finalizar pedido" class="box">
     </form>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
+
+  $("#form").submit(function(event) {
+    event.preventDefault()
+    $(location).attr("href", "./comida.html")
+  });
+
 
   $(document).ready(function(){
     var strProd = "<?php echo $_GET["listProd"];?>"
