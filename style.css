@@ -21,6 +21,12 @@ margin-top: 20px;
 }
 
 #table{
-  margin-left: 35%;
+
+  width: 40%;
+  margin:auto;
   text-align: center;
+}
+
+.centrado{
+  width: 100%;
 }
