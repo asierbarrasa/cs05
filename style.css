@@ -1,0 +1,26 @@
+.form{
+  text-align: center;
+}
+
+.box{
+  display: inline-block;
+  width: 200px;
+  height: 50px;
+}
+
+#cleanBebida, #siguienteBebida, #cleanComida, #siguienteComida{
+  display: inline-block;
+margin-top: 20px;
+  width: 200px;
+  height: 50px;
+
+}
+
+#listProd,#prcTotal{
+  display: none;
+}
+
+#table{
+  margin-left: 35%;
+  text-align: center;
+}
