@@ -16,6 +16,7 @@
       <div id="textarea" >
       </div>
       <br>
+      <input type="button" name="cancelarPedido" value="Cancelar pedido" class="box" id="cancelarPedido">
       <input type="submit" value="Finalizar pedido" class="box">
     </form>
   </div>
@@ -29,6 +30,8 @@
   });
 
 
+
+
   $(document).ready(function(){
     var strProd = "<?php echo $_GET["listProd"];?>"
     var list = strProd.split(",")
@@ -37,11 +40,16 @@
     for(var i = 1; i<list.length-1; i++){
       $("#textarea").html($("#textarea").html() + list[i] + "<br/>")
     }
-    $("#textarea").html($("#textarea").html() + "<br><br> Total ha pagar: <?php echo $_GET['precioTotal'] ?>€")
+    $("#textarea").html($("#textarea").html() + "<br><br> Total a pagar: <?php echo $_GET['precioTotal'] ?>€")
 
     $("#textarea").html($("#textarea").html() + "<br><br> Tu número de pedido es: " + Math.floor((Math.random()*100)+1))
 
   });
+
+    $("#cancelarPedido").click(function(event) {
+      event.preventDefault()
+      $(location).attr("href", "./comida.html")
+    });
   </script>
 </body>
 
