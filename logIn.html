@@ -25,7 +25,15 @@
   <script>
     $("#form").submit(function(event) {
       event.preventDefault()
-      $(location).attr("href", "./comida.html")
+      if ($("#usuario").val()=="cafeteria" && $("#pass").val()=="cafeteria" ) {
+          $(location).attr("href", "./comida.html")
+      }else {
+              $("#usuario").val("")
+        $("#usuario").css("border"," 2px solid red")
+          $("#pass").val("")
+        $("#pass").css("border"," 2px solid red")
+      }
+
     });
   </script>
 

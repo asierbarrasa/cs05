@@ -16,8 +16,9 @@
       <div id="textarea" >
       </div>
       <br>
-      <input type="button" name="cancelarPedido" value="Cancelar pedido" class="box" id="cancelarPedido">
-      <input type="submit" value="Finalizar pedido" class="box">
+    
+      <input type="button" name="cancelarPedido" value="Cancelar pedido" class="box" id="cancelarPedido"/>
+      <input type="submit" value="Finalizar pedido" class="box"/>
     </form>
   </div>
 
