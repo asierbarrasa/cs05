@@ -1,4 +1,3 @@
-
 <html>
 <head>
   <meta charset="UTF-8">
@@ -28,9 +27,9 @@
   $("#form").submit(function(event) {
     event.preventDefault()
     var data = new FormData();
-    data.append("ped","<? echo $_GET['listProd']; ?>");
+    data.append("ped","<?php echo $_GET['listProd']; ?>");
     data.append("id",$("#randNum").val());
-    data.append("total", <? echo $_GET['precioTotal']; ?>);
+    data.append("total", "<?php echo $_GET['precioTotal']; ?>");
 
     $.ajax({
       url:"./guardarPedido.php",

@@ -5,8 +5,9 @@ $xml = simplexml_load_file('./pedidos.xml');
   $pedido-> addAttribute('completado', 'false');
   $pedido-> addAttribute('id', $_POST["id"]);
   $pedido-> addAttribute('total', $_POST["total"]);
-  foreach ($listPed as $ped) {
-    $ele = explode(" ", $ped, 1000);
+  $count = count ($listPed);
+  for ($ped=1; $ped < $count -1 ; $ped++) {
+    $ele = explode(" ", $listPed[$ped] , 1000);
     $producto = $pedido->addChild('producto');
     $producto->addChild('id', $ele[0]);
     $producto->addChild('nombre', $ele[1]);
