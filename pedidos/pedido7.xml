@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Pedidos>
+  <pedido completado="false" id="7" total="8">
+    <producto>
+      <id>m1</id>
+      <nombre>Menu</nombre>
+      <precio>1</precio>
+    </producto>
+    <producto>
+      <id>b3</id>
+      <nombre>Bebida</nombre>
+      <precio>3</precio>
+    </producto>
+  </pedido>
+</Pedidos>
