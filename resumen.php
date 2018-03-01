@@ -16,7 +16,7 @@
       <div id="textarea" >
       </div>
       <br>
-    
+
       <input type="button" name="cancelarPedido" value="Cancelar pedido" class="box" id="cancelarPedido"/>
       <input type="submit" value="Finalizar pedido" class="box"/>
     </form>
@@ -27,7 +27,22 @@
 
   $("#form").submit(function(event) {
     event.preventDefault()
-    $(location).attr("href", "./comida.html")
+    var data = new FormData();
+    data.append("ped","<? echo $_GET['listProd']; ?>");
+    data.append("id",$("#randNum").val());
+    data.append("total", <? echo $_GET['precioTotal']; ?>);
+
+    $.ajax({
+      url:"./guardarPedido.php",
+      type: "POST",
+      data: data,
+      processData: false,
+      contentType: false,
+      success:function(e){
+        alert(e)
+        $(location).attr("href", "./comida.html")
+      }
+    });
   });
 
 
@@ -43,7 +58,7 @@
     }
     $("#textarea").html($("#textarea").html() + "<br><br> Total a pagar: <?php echo $_GET['precioTotal'] ?>€")
 
-    $("#textarea").html($("#textarea").html() + "<br><br> Tu número de pedido es: " + Math.floor((Math.random()*100)+1))
+    $("#textarea").html($("#textarea").html() + "<br><br> Tu número de pedido es: <input type='text' id='randNum' readonly value='" + Math.floor((Math.random()*100)+1) +"' />")
 
   });
 
